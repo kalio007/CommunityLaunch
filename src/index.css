@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: #4D5861;
+  position: relative;
+}
+.card{
+  margin: auto;
+  padding: 15px;
+}
+
+.illustration{
+  position: absolute;
+  right: 10px;
+  bottom: -250px;
+}
+
+.illustration-two{
+  position: absolute;
+  right: 10px;
+  bottom: -300px;
+}
