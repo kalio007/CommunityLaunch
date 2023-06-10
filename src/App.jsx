@@ -1,5 +1,7 @@
 // import  {hero}  from './Assests';
-import  {hero, ill}  from './Assests';
+import {hero, ill}  from './Assests';
+import DepositBtn from './Components/DepositBtn';
+import EthAmount from './Components/EthAmount';
 
 
 function App() {
@@ -26,22 +28,8 @@ function App() {
       
         
       </div>
-      <div className='flex w-full h-[38px] md:h-[47px]'>
-        <input
-        type='number'
-        placeholder='enter amount'
-        className='bg-[#FFFFFF] w-[90%] p-2 text-l md:text-xl text-center'
-        />
-
-        <button className='bg-[#FFFFFF] font-envy text-l md:text-2xl text-[#696969] border-solid border-l-[1px] border-l-[black] p-1 md:p-2 '>
-          ETH
-        </button>
-      </div>
-      <div className='w-full h-[38px] md:h-[47px] bg-[#050FFF] p-2 text-white text-center border-[#FFFFFF] border-[1px] text-[2xl]'>
-        <button className='bg-[#050FFF] opacity-100' >
-          DEPOSIT
-        </button>
-      </div>
+    <EthAmount/>
+    <DepositBtn />
     </div>
     <div className='hidden md:block illustration'>
     <img src={ill} alt='background'/>
