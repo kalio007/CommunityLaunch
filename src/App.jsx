@@ -1,4 +1,3 @@
-// import  {hero}  from './Assests';
 import {hero, ill}  from './Assests';
 import DepositBtn from './Components/DepositBtn';
 import EthAmount from './Components/EthAmount';
@@ -10,8 +9,8 @@ function App() {
   return (
     <body>
       <div className='flex flex-col envy space-y-6 h-full w-[320px] md:w-[420px] z-6 items-center mx-auto mt-40'>
-      <div className='flex flex-col md:flex-row w-full md:w-[400px] justify-between text-[#DFF314]'>
-        <div className='underline underline-offset-4 italic '><h3>commnity round detail</h3></div>
+      <div className='flex flex-col m-0 p-0 md:flex-row w-full md:w-full justify-between text-[#DFF314]'>
+        <div className='underline underline-offset-4 italic m-0 p-0'><h3>commnity round detail</h3></div>
         <div className='underline underline-offset-4 italic'><h3>unison docs</h3></div>
       </div>
       <div className='flex w-full justify-between bg-[#202020] border-[1px] border-white border-solid p-6'>
@@ -29,7 +28,10 @@ function App() {
         
       </div>
     <EthAmount/>
+    <div className='w-full relative opacity-80'>
     <DepositBtn />
+    </div>
+    
     </div>
     <div className='hidden md:block illustration'>
     <img src={ill} alt='background'/>
