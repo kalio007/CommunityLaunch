@@ -1,4 +1,4 @@
 import hero from "./hero.svg";
-import ill from "./ill.svg";
+import hello from "./hello.png";
 
-export { hero, ill };
+export { hero, hello };

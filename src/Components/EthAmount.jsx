@@ -2,7 +2,7 @@ import React from 'react'
 
 function EthAmount() {
   return (
-    <div className='flex w-full h-[38px] md:h-[47px]'>
+    <div className='flex w-full h-[38px] md:h-[47px] opac'>
         <input
         type='number'
         placeholder='enter amount'
