@@ -36,7 +36,7 @@ function App() {
     </div>
       <WagmiConfig config={config}>
       <div className='flex flex-col envy space-y-6 h-full w-[320px] md:w-[420px] z-6 items-center mx-auto mt-40'>
-      <div className='flex md:hidden mb-10 envy m-0  w-[241px] h-[38px]  md:h-[47px] opacity-100 bg-[#202020] p-2 text-white text-center border-[#FFFFFF] border-[1px] text-[2xl]'>
+      <div className='flex md:hidden mb-10 envy m-0  opacity-100 bg-[#202020] p-2 text-white text-center border-[#FFFFFF] border-[1px] text-[2xl]'>
         <button
             className=''
             onClick={() => connect()}
