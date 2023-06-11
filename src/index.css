@@ -4,8 +4,10 @@
 
 
 body{
+  margin: 0;
   background-color: #4D5861;
   position: relative;
+  /* height: 100vh; */
 }
 .card{
   margin: auto;
@@ -14,18 +16,19 @@ body{
 
 .illustration{
   position: absolute;
-  right: 10px;
-  bottom: -250px;
+  right: 60px;
+  bottom: -270px;
+  z-index: 0;
 }
 
 .illustration-two{
   position: absolute;
   right: 10px;
   bottom: -300px;
-  z-index: -1;
+  z-index: 0;
 }
 .opac{
-  opacity: 1;
+  z-index: 2;;
 }
 @font-face{
   font-family: envy;
@@ -33,4 +36,9 @@ body{
 }
 .envy{
   font-family: envy;
+}
+.real{
+  position: absolute;
+  top: -100px;
+  right: 50px;
 }
