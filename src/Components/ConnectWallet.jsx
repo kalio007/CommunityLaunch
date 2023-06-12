@@ -25,15 +25,11 @@ function ConnectWallet() {
     const { connect } = useConnect({
         connector: new InjectedConnector(),
       })
-  
-
     const handleClick = () => {
         setShow(!show); 
         connect();
     }
     
-
-
   return (
     <WagmiConfig config={config}>
     <div className=' hidden md:block real envy m-0  opacity-100 bg-[#202020] py-2 px-4 text-white text-center border-[#FFFFFF] border-[1px] text-[2xl]'>
