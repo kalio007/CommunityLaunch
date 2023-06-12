@@ -1,6 +1,7 @@
 import {hero, hello}  from './Assests';
 import DepositBtn from './Components/DepositBtn';
 import EthAmount from './Components/EthAmount';
+import SwitchToArbMobile from './Components/SwitchToArbMobile';
 // import { configureChains, mainnet } from 'wagmi'
 // import { publicProvider } from 'wagmi/providers/public'
 // import { WagmiConfig, createConfig } from 'wagmi'
@@ -18,7 +19,7 @@ function App() {
     <ConnectWallet/>
       
       <div className='flex flex-col envy space-y-6 h-full w-[320px] md:w-[420px] z-6 items-center mx-auto mt-40'>
-    <ConnectWalletMobile/>
+     <ConnectWalletMobile/>
       <div className='flex flex-col m-0 p-0 md:flex-row w-full md:w-full justify-between text-[#DFF314]'>
         <div className='underline underline-offset-4 italic m-0 p-0'><h3>commnity round detail</h3></div>
         <div className='underline underline-offset-4 italic'><h3>unison docs</h3></div>

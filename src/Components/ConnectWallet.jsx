@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SwitchToArb from './SwitchToArb';
 import { configureChains, mainnet } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
 import { WagmiConfig, createConfig } from 'wagmi'
@@ -15,24 +16,37 @@ const config = createConfig({
   publicClient,
   webSocketPublicClient,
 })
-//hidden md:block real 
-//w-[241px] h-[38px]  md:h-[47px]
+
 function ConnectWallet() {
+    const [show, setShow] = useState(true);
+
     const { address, isConnected } = useAccount()
     const { data: ensName } = useEnsName({ address })
     const { connect } = useConnect({
-      connector: new InjectedConnector(),
-    })
+        connector: new InjectedConnector(),
+      })
+  
+
+    const handleClick = () => {
+        setShow(!show); 
+        connect();
+    }
+    
+
+
   return (
     <WagmiConfig config={config}>
     <div className=' hidden md:block real envy m-0  opacity-100 bg-[#202020] py-2 px-4 text-white text-center border-[#FFFFFF] border-[1px] text-[2xl]'>
     <button
         className='opacity-100'
-        onClick={() => connect()}
+        onClick={handleClick}
     >
       Connect Walllet
     </button>
     </div>
+    {show && (
+        <SwitchToArb/>
+      )}
     </WagmiConfig>
   )
 }
