@@ -1,6 +1,7 @@
 import {hero, hello}  from './Assests';
 import DepositBtn from './Components/DepositBtn';
 import EthAmount from './Components/EthAmount';
+import Trx from './Components/Trx';
 import SwitchToArbMobile from './Components/SwitchToArbMobile';
 // import { configureChains, mainnet } from 'wagmi'
 // import { publicProvider } from 'wagmi/providers/public'
@@ -38,9 +39,13 @@ function App() {
       
         
       </div>
-    <EthAmount/>
-    <DepositBtn/>
+      <EthAmount/>
+      <DepositBtn/>
+      <div className='flex-start'>
+      <Trx/>
     </div>
+    </div>
+    
     <div className='hidden md:w-[627px] md:h-[396px] md:block illustration '>
     <img src={hello} alt='background ' className='w-full h-full'/>
     </div>
