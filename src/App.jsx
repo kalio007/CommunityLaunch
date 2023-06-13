@@ -9,7 +9,7 @@ import SwitchToArbMobile from './Components/SwitchToArbMobile';
 // import { useAccount, useConnect, useEnsName } from 'wagmi'
 // import { InjectedConnector } from 'wagmi/connectors/injected'
 import ConnectWallet from './Components/ConnectWallet';
-import ConnectWalletMobile from './Components/ConnectWalletMobile';
+//import ConnectWalletMobile from './Components/ConnectWalletMobile';
 
 
 
@@ -17,10 +17,17 @@ function App() {
   
   return (
     <body className=' bg-[#4D5861]'>
-    <ConnectWallet/>
+
+      <div className='hidden md:block'>
+      <ConnectWallet/>
+      </div>
+    
       
-      <div className='flex flex-col envy space-y-6 h-full w-[320px] md:w-[420px] z-6 items-center mx-auto mt-40'>
-     <ConnectWalletMobile/>
+    <div className='flex flex-col envy space-y-6 h-full w-[320px] md:w-[420px] z-6 items-center mx-auto mt-40'>
+      <div className='block md:hidden'>
+      <ConnectWallet/>
+     </div>
+     
       <div className='flex flex-col m-0 p-0 md:flex-row w-full md:w-full justify-between text-[#DFF314]'>
         <div className='underline underline-offset-4 italic m-0 p-0'><h3>commnity round detail</h3></div>
         <div className='underline underline-offset-4 italic'><h3>unison docs</h3></div>

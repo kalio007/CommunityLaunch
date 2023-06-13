@@ -5,6 +5,7 @@ import { publicProvider } from 'wagmi/providers/public'
 import { WagmiConfig, createConfig } from 'wagmi'
 import { useAccount, useConnect, useEnsName } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
+import SwitchToArbMobile from './SwitchToArbMobile';
 
  
 const { chains, publicClient, webSocketPublicClient } = configureChains(
@@ -43,6 +44,20 @@ function ConnectWallet() {
     {show && (
         <SwitchToArb/>
       )}
+      
+    <div className='flex md:hidden mb-5 envy m-0  opacity-100 bg-[#202020] p-2 text-white text-center border-[#FFFFFF] border-[1px] text-[2xl]'>
+      <button
+          className=''
+          onClick={handleClick}
+      >
+        Connect Walllet
+      </button>   
+  </div>
+  <div>
+  {show && (
+      <SwitchToArbMobile/>
+    )}
+  </div>
     </WagmiConfig>
   )
 }
